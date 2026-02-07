@@ -11,7 +11,7 @@ A high-contrast EVA Unit 01 palette with deep violet shadows, neon lime accents,
 Use the Omarchy theme installer:
 
 ```bash
-omarchy-theme-install omarchy-theme-install (https://github.com/OldJobobo/omarchy-01-theme)
+omarchy-theme-install omarchy-theme-install https://github.com/OldJobobo/omarchy-01-theme
 ```
 
 ## Wallpapers
