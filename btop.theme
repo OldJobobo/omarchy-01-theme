@@ -1,0 +1,103 @@
+#  ASCII art by:
+#  x@xero.style    _            ____
+#  https://x-e.ro : \           |   \    .
+#                 |  \ .        |    :   |\            /\
+#              .  |   :|\__     |    |   | \          /  \
+# .            |\ |   |! \ \    |    |   | |\        /   /
+# \"-.______   | \:   ||\ \ \   |    |   | | \      /   /
+#  \_       "-_|  |\  || \ \/   |    |___| ! |\____/  _/-. /\
+#    "-_   ____:  |_\ ||  \/  ___\  __  _//  | |  ___ \---" /
+#       \  \   |  _____,  /___\___\/ / /   \_! |  // _/  / /
+#     ___\_ \__|  |    | __. _/____ / /     /  > // /    \/
+#   //_________|  /    |/  |/  \__// /     /  /_/ \/
+#              | /     |   :      | /     /__/
+#              |/                 |/   E V A N G E L I O N
+#
+# Based on the evangelion.nvim colorschme by xero
+#
+# ------------------------------------------------------------
+
+
+# Main background, empty for terminal default, need to be empty if you want transparent background
+theme[main_bg]="#1e142e"
+
+# Main text color
+theme[main_fg]="#d99145"
+
+# Title color for boxes
+theme[title]="#e6bb85"
+
+# Highlight color for keyboard shortcuts
+theme[hi_fg]="#87ff5f"
+
+# Background color of selected item in processes box
+theme[selected_bg]="#d99145"
+
+# Foreground color of selected item in processes box
+theme[selected_fg]="#ccd2d9"
+
+# Color of inactive/disabled text
+theme[inactive_fg]="#875faf"
+
+# Misc colors for processes box including mini cpu graphs, details memory graph and details status text
+theme[proc_misc]="#a4d2ec"
+
+# Box outline and divider line color
+theme[cpu_box]="#ce67f0"
+theme[mem_box]="#87ff5f"
+theme[net_box]="#ce67f0"
+theme[proc_box]="#87ff5f"
+theme[div_line]="#87ff5f"
+
+# Gradient for all meters and graphs
+theme[temp_start]="#ce67f0"
+theme[temp_mid]="#ab92fc"
+theme[temp_end]="#e6bb85"
+
+
+theme[cpu_start]="#87ff5f"
+theme[cpu_mid]="#ab92fc"
+theme[cpu_end]="#e6bb85"
+
+
+theme[free_start]="#ab92fc"
+theme[free_mid]="#87ff5f"
+theme[free_end]="#87ff5f"
+
+
+theme[cached_start]="#87ff5f"
+theme[cached_mid]="#87ff5f"
+theme[cached_end]="#87ff5f"
+
+
+theme[available_start]="#ce67f0"
+theme[available_mid]="#ce67f0"
+theme[available_end]="#ce67f0"
+
+
+theme[used_start]="#e6bb85"
+theme[used_mid]="#d99145"
+theme[used_end]="#ce67f0"
+
+
+theme[download_start]="#87ff5f"
+theme[download_mid]="#ce67f0"
+theme[download_end]="#ab92fc"
+
+
+theme[upload_start]="#87ff5f"
+theme[upload_mid]="#ce67f0"
+theme[upload_end]="#ab92fc"
+
+
+#    ____  __    __                    
+#   / __ \/ /___/ /                    
+#  / / / / / __  /                     
+# / /_/ / / /_/ /                      
+# \____/_/\__,_/ __          __        
+#       / /___  / /_  ____  / /_  ____ 
+#  __  / / __ \/ __ \/ __ \/ __ \/ __ \
+# / /_/ / /_/ / /_/ / /_/ / /_/ / /_/ /
+# \____/\____/_.___/\____/_.___/\____/ 
+#                                      
+# 2-3-26

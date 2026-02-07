@@ -1,0 +1,510 @@
+@define-color background #0f0a16;
+@define-color foreground #f5f7fb;
+@define-color accent #ab92fc;
+@define-color accent_alt #ff7ad9;
+@define-color good #a4d2ec;
+@define-color warn #e6bb85;
+@define-color danger #ce67f0;
+@define-color color11 #87ff5f;
+@define-color color3 #87ff5f;
+@define-color color6 #ce67f0;
+@define-color color0 #1e142e;
+@define-color panel @color3;
+@define-color panel_alt @color3;
+@define-color bar_bg #875faf;
+@define-color bar_bg_alt #6f4fa3;
+@define-color bar_bg_dark #563a88;
+
+* {
+  font-family: "Hack Nerd Font Propo";
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 0;
+  min-height: 0;
+}
+
+window#waybar {
+  background-color: @bar_bg;
+  background-image:
+    linear-gradient(135deg, @bar_bg_dark 0%, @bar_bg_dark 18%, transparent 18%, transparent 100%),
+    linear-gradient(135deg, transparent 0%, transparent 40%, @bar_bg_dark 40%, @bar_bg_dark 60%, transparent 60%, transparent 100%),
+    linear-gradient(135deg, transparent 0%, transparent 75%, @bar_bg_dark 75%, @bar_bg_dark 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  color: @color0;
+  border-radius: 0;
+}
+
+window#waybar.empty #window {
+  background: transparent;
+  color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+#window {
+  margin: 4px 6px;
+  color: alpha(@foreground, 0.7);
+}
+
+#custom-omarchy {
+  font-size: 18px;
+  margin: 6px 6px 6px 6px;
+  padding: 0 10px 0px 10px;
+  background-color: @panel_alt;
+  border: none;
+  color: @color0;
+  background-image:
+    linear-gradient(45deg, transparent 0, transparent 8px, @color0 8px, @color0 10px, transparent 10px),
+    linear-gradient(225deg, @bar_bg_dark 0, @bar_bg_dark 8px, transparent 8px),
+    linear-gradient(@color0, @color0),
+    linear-gradient(@color0, @color0),
+    linear-gradient(@color0, @color0),
+    linear-gradient(@color0, @color0);
+  background-repeat: no-repeat;
+  background-size: 12px 12px, 12px 12px, 100% 2px, 2px 100%, 100% 2px, 2px 100%;
+  background-position: top right, top right, top left, top right, bottom left, top left;
+}
+
+#custom-eva_status {
+  margin: 6px 8px 6px 0;
+  padding: 0 80px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  background-image: none;
+  color: @color3;
+  font-weight: 700;
+  font-family: "Hack Nerd Font";
+  font-size: 16px;
+  text-shadow: 0 2px 4px alpha(@color0, 0.7);
+}
+
+#workspaces {
+  margin: 6px 8px 6px 0;
+  padding: 2px 4px 2px 4px;
+  background-color: transparent;
+  border: none;
+  background-image: none;
+}
+
+button {
+  box-shadow: none;
+  border: none;
+  border-radius: 0;
+  transition: 0.25s ease-in-out;
+}
+
+button:hover {
+  background: inherit;
+}
+
+#workspaces button {
+  padding: 2px 10px 2px 10px;
+  margin: 0 2px;
+  background-color: @panel_alt;
+  color: @color0;
+  border: none;
+  transition: padding 0.25s ease-in-out, background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+  background-image:
+    linear-gradient(45deg, transparent 0, transparent 8px, @color0 8px, @color0 10px, transparent 10px),
+    linear-gradient(225deg, @bar_bg_dark 0, @bar_bg_dark 8px, transparent 8px),
+    linear-gradient(@color0, @color0),
+    linear-gradient(@color0, @color0),
+    linear-gradient(@color0, @color0),
+    linear-gradient(@color0, @color0);
+  background-repeat: no-repeat;
+  background-size: 12px 12px, 12px 12px, 100% 2px, 2px 100%, 100% 2px, 2px 100%;
+  background-position: top right, top right, top left, top right, bottom left, top left;
+}
+
+#workspaces button:hover {
+  background-color: @panel;
+  color: @color0;
+  border: none;
+  padding: 2px 20px 2px 20px;
+  background-image:
+    linear-gradient(45deg, transparent 0, transparent 8px, @color0 8px, @color0 10px, transparent 10px),
+    linear-gradient(225deg, @bar_bg_dark 0, @bar_bg_dark 8px, transparent 8px),
+    linear-gradient(@color0, @color0),
+    linear-gradient(@color0, @color0),
+    linear-gradient(@color0, @color0),
+    linear-gradient(@color0, @color0);
+  background-repeat: no-repeat;
+  background-size: 12px 12px, 12px 12px, 100% 2px, 2px 100%, 100% 2px, 2px 100%;
+  background-position: top right, top right, top left, top right, bottom left, top left;
+}
+
+#workspaces button.active {
+  background-color: @accent;
+  color: @color0;
+  border: none;
+  background-image:
+    linear-gradient(45deg, transparent 0, transparent 8px, @color0 8px, @color0 10px, transparent 10px),
+    linear-gradient(225deg, @bar_bg_dark 0, @bar_bg_dark 8px, transparent 8px),
+    linear-gradient(@color0, @color0),
+    linear-gradient(@color0, @color0),
+    linear-gradient(@color0, @color0),
+    linear-gradient(@color0, @color0);
+  background-repeat: no-repeat;
+  background-size: 12px 12px, 12px 12px, 100% 2px, 2px 100%, 100% 2px, 2px 100%;
+  background-position: top right, top right, top left, top right, bottom left, top left;
+}
+
+#workspaces button.empty {
+  color: alpha(@color0, 0.4);
+  opacity: 0.55;
+}
+
+#workspaces button.empty.active {
+  background-color: @foreground;
+  color: @color0;
+  border: none;
+  background-image:
+    linear-gradient(45deg, transparent 0, transparent 8px, @color0 8px, @color0 10px, transparent 10px),
+    linear-gradient(225deg, @bar_bg_dark 0, @bar_bg_dark 8px, transparent 8px),
+    linear-gradient(@color0, @color0),
+    linear-gradient(@color0, @color0),
+    linear-gradient(@color0, @color0),
+    linear-gradient(@color0, @color0);
+  background-repeat: no-repeat;
+  background-size: 12px 12px, 12px 12px, 100% 2px, 2px 100%, 100% 2px, 2px 100%;
+  background-position: top right, top right, top left, top right, bottom left, top left;
+}
+
+#custom-omarchy,
+#workspaces button,
+#workspaces button:hover,
+#workspaces button.active,
+#workspaces button.empty.active,
+#hyprland-window,
+#clock,
+#battery,
+#cpu,
+#mpris,
+#network,
+#pulseaudio,
+#idle_inhibitor,
+#tray,
+#bluetooth,
+#backlight,
+#custom-update,
+#custom-updatespacman,
+#custom-screenrecording-indicator,
+#battery.charging,
+#battery.plugged,
+#power-profiles-daemon.performance,
+#power-profiles-daemon.balanced,
+#power-profiles-daemon.power-saver,
+#network.disconnected,
+#bluetooth.disabled,
+#pulseaudio.muted {
+  background-origin: border-box;
+  background-clip: border-box;
+}
+
+#hyprland-window,
+#clock,
+#battery,
+#cpu,
+#mpris,
+#network,
+#pulseaudio,
+#idle_inhibitor,
+#tray,
+#bluetooth,
+#backlight,
+#custom-update,
+#custom-updatespacman,
+#custom-screenrecording-indicator {
+  padding: 0 14px;
+  margin: 6px 8px 6px 0;
+  color: @color0;
+  background-color: @panel;
+  border: none;
+  background-image:
+    linear-gradient(45deg, transparent 0, transparent 8px, @color0 8px, @color0 10px, transparent 10px),
+    linear-gradient(225deg, @bar_bg_dark 0, @bar_bg_dark 8px, transparent 8px),
+    linear-gradient(@color0, @color0),
+    linear-gradient(@color0, @color0),
+    linear-gradient(@color0, @color0),
+    linear-gradient(@color0, @color0);
+  background-repeat: no-repeat;
+  background-size: 12px 12px, 12px 12px, 100% 2px, 2px 100%, 100% 2px, 2px 100%;
+  background-position: top right, top right, top left, top right, bottom left, top left;
+}
+
+#tray {
+  background-color: @panel_alt;
+  border: none;
+  background-image:
+    linear-gradient(45deg, transparent 0, transparent 8px, @color0 8px, @color0 10px, transparent 10px),
+    linear-gradient(225deg, @bar_bg_dark 0, @bar_bg_dark 8px, transparent 8px),
+    linear-gradient(@color0, @color0),
+    linear-gradient(@color0, @color0),
+    linear-gradient(@color0, @color0),
+    linear-gradient(@color0, @color0);
+  background-repeat: no-repeat;
+  background-size: 12px 12px, 12px 12px, 100% 2px, 2px 100%, 100% 2px, 2px 100%;
+  background-position: top right, top right, top left, top right, bottom left, top left;
+}
+
+#clock,
+#idle_inhibitor,
+#custom-update,
+#custom-updatespacman {
+  background-color: @panel_alt;
+  border: none;
+  background-image:
+    linear-gradient(45deg, transparent 0, transparent 8px, @color0 8px, @color0 10px, transparent 10px),
+    linear-gradient(225deg, @bar_bg_dark 0, @bar_bg_dark 8px, transparent 8px),
+    linear-gradient(@color0, @color0),
+    linear-gradient(@color0, @color0),
+    linear-gradient(@color0, @color0),
+    linear-gradient(@color0, @color0);
+  background-repeat: no-repeat;
+  background-size: 12px 12px, 12px 12px, 100% 2px, 2px 100%, 100% 2px, 2px 100%;
+  background-position: top right, top right, top left, top right, bottom left, top left;
+}
+
+#battery {
+  color: @color0;
+}
+
+#battery.charging,
+#battery.plugged {
+  color: @color0;
+  background-color: @good;
+  border: none;
+  background-image:
+    linear-gradient(45deg, transparent 0, transparent 8px, @color0 8px, @color0 10px, transparent 10px),
+    linear-gradient(225deg, @bar_bg_dark 0, @bar_bg_dark 8px, transparent 8px),
+    linear-gradient(@color0, @color0),
+    linear-gradient(@color0, @color0),
+    linear-gradient(@color0, @color0),
+    linear-gradient(@color0, @color0);
+  background-repeat: no-repeat;
+  background-size: 12px 12px, 12px 12px, 100% 2px, 2px 100%, 100% 2px, 2px 100%;
+  background-position: top right, top right, top left, top right, bottom left, top left;
+}
+
+@keyframes blink {
+  to {
+    background-color: @danger;
+    color: @background;
+  }
+}
+
+#battery.critical:not(.charging) {
+  background-color: @danger;
+  color: @background;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: steps(12);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#backlight {
+  color: @color0;
+}
+
+#power-profiles-daemon.performance {
+  padding: 0 14px;
+  margin: 6px 8px 6px 0;
+  border: none;
+  background-image:
+    linear-gradient(45deg, transparent 0, transparent 8px, @color0 8px, @color0 10px, transparent 10px),
+    linear-gradient(225deg, @bar_bg_dark 0, @bar_bg_dark 8px, transparent 8px),
+    linear-gradient(@color0, @color0),
+    linear-gradient(@color0, @color0),
+    linear-gradient(@color0, @color0),
+    linear-gradient(@color0, @color0);
+  background-repeat: no-repeat;
+  background-size: 12px 12px, 12px 12px, 100% 2px, 2px 100%, 100% 2px, 2px 100%;
+  background-position: top right, top right, top left, top right, bottom left, top left;
+  background-color: @panel;
+  color: @color0;
+}
+
+#power-profiles-daemon.balanced {
+  padding: 0 14px;
+  margin: 6px 8px 6px 0;
+  border: none;
+  background-image:
+    linear-gradient(45deg, transparent 0, transparent 8px, @color0 8px, @color0 10px, transparent 10px),
+    linear-gradient(225deg, @bar_bg_dark 0, @bar_bg_dark 8px, transparent 8px),
+    linear-gradient(@color0, @color0),
+    linear-gradient(@color0, @color0),
+    linear-gradient(@color0, @color0),
+    linear-gradient(@color0, @color0);
+  background-repeat: no-repeat;
+  background-size: 12px 12px, 12px 12px, 100% 2px, 2px 100%, 100% 2px, 2px 100%;
+  background-position: top right, top right, top left, top right, bottom left, top left;
+  background-color: @panel;
+  color: @color0;
+}
+
+#power-profiles-daemon.power-saver {
+  padding: 0 14px;
+  margin: 6px 8px 6px 0;
+  border: none;
+  background-image:
+    linear-gradient(45deg, transparent 0, transparent 8px, @color0 8px, @color0 10px, transparent 10px),
+    linear-gradient(225deg, @bar_bg_dark 0, @bar_bg_dark 8px, transparent 8px),
+    linear-gradient(@color0, @color0),
+    linear-gradient(@color0, @color0),
+    linear-gradient(@color0, @color0),
+    linear-gradient(@color0, @color0);
+  background-repeat: no-repeat;
+  background-size: 12px 12px, 12px 12px, 100% 2px, 2px 100%, 100% 2px, 2px 100%;
+  background-position: top right, top right, top left, top right, bottom left, top left;
+  background-color: @panel_alt;
+  color: @color0;
+}
+
+#power-profiles-daemon {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: transparent;
+  color: transparent;
+}
+
+#cpu {
+  color: @color0;
+}
+
+#mpris {
+  color: @color0;
+  animation: mpris-pulse 3s linear infinite alternate;
+}
+
+#mpris.playing {
+  color: @color0;
+}
+
+#mpris.paused {
+   color: @color0;
+ }
+
+@keyframes mpris-pulse {
+  to {
+    background-color: @color11;
+    color: @background;
+  }
+}
+
+#network {
+  color: @color0;
+}
+
+#network.disconnected {
+  background-color: @warn;
+  color: @color0;
+  border: none;
+  background-image:
+    linear-gradient(45deg, transparent 0, transparent 8px, @color0 8px, @color0 10px, transparent 10px),
+    linear-gradient(225deg, @bar_bg_dark 0, @bar_bg_dark 8px, transparent 8px),
+    linear-gradient(@color0, @color0),
+    linear-gradient(@color0, @color0),
+    linear-gradient(@color0, @color0),
+    linear-gradient(@color0, @color0);
+  background-repeat: no-repeat;
+  background-size: 12px 12px, 12px 12px, 100% 2px, 2px 100%, 100% 2px, 2px 100%;
+  background-position: top right, top right, top left, top right, bottom left, top left;
+}
+
+#bluetooth {
+  color: @color0;
+}
+
+#bluetooth.disabled {
+  background-color: @warn;
+  color: @color0;
+  border: none;
+  background-image:
+    linear-gradient(45deg, transparent 0, transparent 8px, @color0 8px, @color0 10px, transparent 10px),
+    linear-gradient(225deg, @bar_bg_dark 0, @bar_bg_dark 8px, transparent 8px),
+    linear-gradient(@color0, @color0),
+    linear-gradient(@color0, @color0),
+    linear-gradient(@color0, @color0),
+    linear-gradient(@color0, @color0);
+  background-repeat: no-repeat;
+  background-size: 12px 12px, 12px 12px, 100% 2px, 2px 100%, 100% 2px, 2px 100%;
+  background-position: top right, top right, top left, top right, bottom left, top left;
+}
+
+#pulseaudio {
+  color: @color0;
+}
+
+#pulseaudio.muted {
+  background-color: @danger;
+  color: @color0;
+  border: none;
+  background-image:
+    linear-gradient(45deg, transparent 0, transparent 8px, @color0 8px, @color0 10px, transparent 10px),
+    linear-gradient(225deg, @bar_bg_dark 0, @bar_bg_dark 8px, transparent 8px),
+    linear-gradient(@color0, @color0),
+    linear-gradient(@color0, @color0),
+    linear-gradient(@color0, @color0),
+    linear-gradient(@color0, @color0);
+  background-repeat: no-repeat;
+  background-size: 12px 12px, 12px 12px, 100% 2px, 2px 100%, 100% 2px, 2px 100%;
+  background-position: top right, top right, top left, top right, bottom left, top left;
+}
+
+tooltip {
+  padding: 5px 7px;
+  background: @background;
+  border: 1px solid alpha(@accent, 0.7);
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 11.5px;
+}
+
+tooltip label {
+  color: @foreground;
+  font-weight: 500;
+}
+
+#custom-screenrecording-indicator {
+  font-size: 12px;
+  padding: 0 20px;
+  margin: 6px 8px 6px 0;
+  color: transparent;
+  border: none;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#custom-screenrecording-indicator.active {
+  color: @accent_alt;
+  animation-name: blink-recording;
+  animation-duration: 0.5s;
+}
+
+@keyframes blink-recording {
+  to {
+    color: @background;
+  }
+}
+
+@keyframes blink-inhibitor {
+  to {
+    color: @background;
+  }
+}
+
+#idle_inhibitor {
+  color: @color0;
+}
+
+#idle_inhibitor.activated {
+  color: @color0;
+  animation-name: blink-inhibitor;
+  animation-duration: 1s;
+}

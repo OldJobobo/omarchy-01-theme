@@ -1,0 +1,60 @@
+#  ASCII art by:
+#  x@xero.style    _            ____
+#  https://x-e.ro : \           |   \    .
+#                 |  \ .        |    :   |\            /\
+#              .  |   :|\__     |    |   | \          /  \
+# .            |\ |   |! \ \    |    |   | |\        /   /
+# \"-.______   | \:   ||\ \ \   |    |   | | \      /   /
+#  \_       "-_|  |\  || \ \/   |    |___| ! |\____/  _/-. /\
+#    "-_   ____:  |_\ ||  \/  ___\  __  _//  | |  ___ \---" /
+#       \  \   |  _____,  /___\___\/ / /   \_! |  // _/  / /
+#     ___\_ \__|  |    | __. _/____ / /     /  > // /    \/
+#   //_________|  /    |/  |/  \__// /     /  /_/ \/
+#              | /     |   :      | /     /__/
+#              |/                 |/   E V A N G E L I O N
+#
+# Based on the evangelion.nvim colorschme by xero
+#
+# ------------------------------------------------------------
+
+
+accent = "#ab92fc"
+active_border_color = "#ab92fc"
+active_tab_background = "#ab92fc"
+
+cursor = "#ccd2d9"
+
+foreground = "#ccd2d9"
+background = "#1e142e"
+
+selection_foreground = "#1e142e"
+selection_background = "#ab92fc"
+
+color0 = "#1e142e"
+color1 = "#a1a0ad"
+color2 = "#e6bb85"
+color3 = "#87ff5f"
+color4 = "#ab92fc"
+color5 = "#a4d2ec"
+color6 = "#ce67f0"
+color7 = "#875faf"
+color8 = "#d99145"
+color9 = "#a1a0ad"
+color10 = "#e6bb85"
+color11 = "#87ff5f"
+color12 = "#ab92fc"
+color13 = "#a4d2ec"
+color14 = "#ce67f0"
+color15 = "#ccd2d9"
+
+#    ____  __    __                    
+#   / __ \/ /___/ /                    
+#  / / / / / __  /                     
+# / /_/ / / /_/ /                      
+# \____/_/\__,_/ __          __        
+#       / /___  / /_  ____  / /_  ____ 
+#  __  / / __ \/ __ \/ __ \/ __ \/ __ \
+# / /_/ / /_/ / /_/ / /_/ / /_/ / /_/ /
+# \____/\____/_.___/\____/_.___/\____/ 
+#                                      
+# 2-3-26

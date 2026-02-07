@@ -1,0 +1,108 @@
+@define-color eva-core #1e142e;
+@define-color eva-shell #1e142e;
+@define-color eva-accent #ab92fc;
+@define-color eva-neon #87ff5f;
+@define-color eva-warning #d99145;
+@define-color eva-text #ccd2d9;
+@define-color eva-muted #a1a0ad;
+
+
+
+window {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+}
+
+.osd,
+#osd,
+osd {
+  background-image: linear-gradient(135deg, alpha(@eva-core, 0.95), alpha(@eva-shell, 0.9));
+  border: 2px solid @eva-accent;
+  border-radius: 8px;
+  padding: 18px 32px;
+  box-shadow:
+    inset 0 0 0 1px alpha(@eva-warning, 0.75),
+    inset 0 0 10px alpha(@eva-neon, 0.2),
+    0 0 16px alpha(@eva-accent, 0.45),
+    0 0 24px alpha(@eva-neon, 0.2),
+    0 8px 20px alpha(@eva-core, 0.85);
+}
+
+image {
+  color: @eva-neon;
+  -gtk-icon-size: 36px;
+  margin: 0 14px 0 0;
+}
+
+label {
+  color: @eva-text;
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 22px !important;
+  font-weight: 700;
+  line-height: 1.1;
+  text-shadow: 0 0 8px alpha(@eva-neon, 0.35);
+}
+
+#osd label,
+.osd label,
+osd label {
+  font-size: 16px;
+}
+
+progressbar {
+  border-radius: 6px;
+  padding-bottom: 4px;
+  margin: 4px 0 0 0;
+  min-height: 12px;
+  min-width: 180px;
+}
+
+progressbar > trough {
+  background-image:
+    repeating-linear-gradient(
+      135deg,
+      alpha(@eva-accent, 0.18) 0px,
+      alpha(@eva-accent, 0.18) 8px,
+      rgba(255, 255, 255, 0.06) 8px,
+      rgba(255, 255, 255, 0.06) 16px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.08) 0%,
+      rgba(255, 255, 255, 0.12) 50%,
+      rgba(255, 255, 255, 0.08) 100%
+    );
+  border-radius: 6px;
+  border: 1px solid alpha(@eva-accent, 0.6);
+  min-height: 12px;
+}
+
+progressbar > trough > progress {
+  background-image:
+    repeating-linear-gradient(
+      135deg,
+      alpha(@eva-core, 0.25) 0px,
+      alpha(@eva-core, 0.25) 10px,
+      rgba(0, 0, 0, 0.0) 10px,
+      rgba(0, 0, 0, 0.0) 20px
+    ),
+    linear-gradient(
+      90deg,
+      @eva-neon 0%,
+      @eva-neon 70%,
+      @eva-warning 100%
+    );
+  border: none;
+  min-height: 12px;
+}
+
+progressbar trough {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+progressbar progress {
+  background: @eva-neon;
+}
