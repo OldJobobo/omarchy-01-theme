@@ -1,10 +1,10 @@
-# Omarchy 01 (Evangelion Unit 01) Theme
+# Omarchy 01 Theme
 
 A high-contrast EVA Unit 01 palette with deep violet shadows, neon lime accents, and soft lilac highlights for a dramatic, sci-fi cockpit feel.
 
 ## Preview
 
-![Theme preview](backgrounds/evangelion_unit01.jpg)
+![Theme preview](preview.png)
 
 ## Install
 
@@ -13,11 +13,6 @@ Use the Omarchy theme installer:
 ```bash
 omarchy-theme-install <repo_url>
 ```
-
-## Widgets
-
-**Optional overlays**
-- None
 
 ## Wallpapers
 

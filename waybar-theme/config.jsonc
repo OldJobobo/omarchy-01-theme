@@ -116,7 +116,7 @@
     "format": "UNIT.01 // rev 3.33",
     "tooltip": true,
     "tooltip-format": "SYNC: 87.2%\nMODE: MANUAL\nSTATUS: CONTAINED\nPROTOCOL: GEOFRONT",
-    "on-click": "omarchy-launch-floating-terminal-with-presentation bash -lc \"$HOME/.config/omarchy/current/theme/init.sh\""
+    "on-click": "omarchy-launch-or-focus-tui \"bash -c '\\\"$HOME/.config/omarchy/current/theme/init.sh\\\"; read -n 1 -s'\""
   },
   "cpu": {
     "interval": 2,
